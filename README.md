@@ -1,4 +1,4 @@
-# hamiltoninan
+# hamiltonian
 
 ## This is a Hamiltonian path finder implementation. 
 
