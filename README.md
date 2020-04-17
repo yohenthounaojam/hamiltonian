@@ -1,13 +1,24 @@
 # hamiltonian 
 This is a Hamiltonian path finder implementation. 
+
 ----
+
 ### Deliverables: 
 - [x] Represent a random graph with n vertices of at least degree one (n is at least 100).
-- [x] Randomly select two vertices (x,y) from the graph.
+- [x] Randomly select two vertices **(x,y)** from the graph.
 - [x] Find all of the possible hamiltonian paths in the graph.
+
 ----
+
 ### How to run the solution.
+
+To run the Colab Notebook:
+- Open the Notebok using Google Colab
+- Under Runtime, **Run All**
+- To change the number of nodes, cahnge the range of **vertices**. (Eg: vertices=random.randrange(50,60); for 50-60 nodes)
+
 ----
+
 ### Solution
 The solution was implemented in **Python** using the Google Colab **GPU**. 
 
@@ -16,8 +27,13 @@ The solution was implemented in **Python** using the Google Colab **GPU**.
 - Matplotlib, Pyplot 
 
 #### Algorithm:
-The idea behind my solution is to use a simple Depth First Search (**DFS**). 
+The idea behind my solution is to use a simple Depth First Search (**DFS**) and recursion. 
+
+#### Time Complexity:
+
+
 ----
+
 #### Drawbacks
 
 #### Errors
