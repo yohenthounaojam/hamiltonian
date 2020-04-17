@@ -1,14 +1,13 @@
-# hamiltonian paths
-
-## This is a Hamiltonian path finder implementation. 
-
+# hamiltonian 
+This is a Hamiltonian path finder implementation. 
+----
 ### Deliverables: 
 - [x] Represent a random graph with n vertices of at least degree one (n is at least 100).
 - [x] Randomly select two vertices (x,y) from the graph.
 - [x] Find all of the possible hamiltonian paths in the graph.
-
+----
 ### How to run the solution.
-
+----
 ### Solution
 The solution was implemented in **Python** using the Google Colab **GPU**. 
 
@@ -18,7 +17,7 @@ The solution was implemented in **Python** using the Google Colab **GPU**.
 
 #### Algorithm:
 The idea behind my solution is to use a simple Depth First Search (**DFS**). 
-
+----
 #### Drawbacks
 
 #### Errors
