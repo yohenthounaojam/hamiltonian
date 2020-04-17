@@ -27,6 +27,10 @@ The solution was implemented in **Python** using the Google Colab **GPU**.
 The following output is a simple example for 5 nodes with created with at least one hamiltonian path. 
 ![](photos/sample_output.png?raw=true "Samlpe Graph")
 
+Using the implementation explained below we get the result shown below:
+![](photos/Output.png?raw=true "Samlpe Graph")
+
+
 #### Libraries used:
 - NetwrokX
 - Matplotlib, Pyplot 
