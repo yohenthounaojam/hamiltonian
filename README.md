@@ -14,9 +14,9 @@ This is a Hamiltonian path finder implementation.
 To run the Colab Notebook:
 - Open the Notebok using Google Colab
 - Under Runtime, **Run All**
-- To change the number of nodes, cahnge the range of **vertices**. ***(Eg: vertices=random.randrange(50,60); for 50-60 nodes)***
+- To change the number of nodes, cahnge the range of **vertices**. _(Eg: vertices=random.randrange(50,60); for 50-60 nodes)_
 
-***To rum it in .py, donwload directly from Google Colaba or run the hamiltonian.py in this repository.***
+_To rum it as .py, donwload directly from Google Colaba or run the hamiltonian.py in this repository._
 
 ----
 
@@ -37,6 +37,20 @@ Using the implementation explained below we get the result shown below:
 
 #### Algorithm:
 The idea behind my solution is to use a simple Depth First Search (**DFS**) and recursion. 
+_This is not the most optimal solution. 
+
+We start a depth first search traversal from **x** and do the following at each vertex:
+1. Store each visited node in an array called **path**. 
+2. Mark the node as True (for visited) in a **visited** array; where the index of the node corresponds to the node. This will prevent any cycles from occuring. 
+
+When we reach the node **y**, we print the whole path array if it meets the following important **condition**:
+- The len(path) is equal to the number of nodes; meaning all nodes have been visited. 
+
+#### Optimizing the above
+The fllowing are logical assumptions we can make to optimize the algorithm above. 
+
+We know for sure that the graph will not have a Hamiltonian Path if any node other than x,y 
+
 
 #### Time Complexity:
 
