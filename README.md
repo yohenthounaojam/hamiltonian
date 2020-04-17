@@ -12,7 +12,7 @@ This is a Hamiltonian path finder implementation for a non directed graph.
 ### How to run the solution.
 
 To run the Colab Notebook:
-- Open the Notebok using Google Colab
+- Open the **Hamiltonian.ipynb** Notebok using Google Colab
 - Under Runtime, **Run All**
 - To change the number of nodes, cahnge the range of **vertices**. _(Eg: vertices=random.randrange(50,60); for 50-60 nodes)_
 
