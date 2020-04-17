@@ -21,6 +21,8 @@ _To rum it as .py, donwload directly from Google Colaba or run the hamiltonian.p
 ----
 
 ## Solution
+I came up with this solution after multiple attempts on trying to generate a tree from all possible paths and then return the path that has the same level as the number of nodes. However, I soon realized that it could be simply performed using an array that stores the path.
+
 The solution was implemented in **Python** using the Google Colab **GPU**. 
 
 #### Sample Output:
@@ -46,6 +48,8 @@ We start a depth first search traversal from **x** and do the following at each 
 
 When we reach the node **y**, we print the whole path array if it meets the following important **condition**:
 - The len(path) is equal to the number of nodes; meaning all nodes have been visited. 
+
+This algorithm can be looked as having a stack of visited nodes as well.
 
 ----
 
@@ -81,6 +85,7 @@ Although there are better solutions like the famous Help Karp Algorithm with O(n
 ----
 
 ### More Optimal Solutions 
+After implementing my solution, I came accross the following famous algorithm and a promising research paper.
 
 #### For graphs with maximum degree of 3
 - Time Complexity: O(1.251<sup>n</sup>)
