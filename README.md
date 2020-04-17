@@ -20,7 +20,7 @@ _To rum it as .py, donwload directly from Google Colaba or run the hamiltonian.p
 
 ----
 
-### Solution
+## Solution
 The solution was implemented in **Python** using the Google Colab **GPU**. 
 
 #### Sample Output:
@@ -30,10 +30,11 @@ The following output is a simple example for 5 nodes with created with at least 
 Using the implementation explained below we get the result shown below:
 ![](photos/Output.png?raw=true "Samlpe Graph")
 
-
 #### Libraries used:
 - NetwrokX
-- Matplotlib, Pyplot 
+- Matplotlib, Pyplot
+
+----
 
 #### Algorithm:
 The idea behind my solution is to use a simple Depth First Search (**DFS**) and recursion. 
@@ -46,12 +47,15 @@ We start a depth first search traversal from **x** and do the following at each 
 When we reach the node **y**, we print the whole path array if it meets the following important **condition**:
 - The len(path) is equal to the number of nodes; meaning all nodes have been visited. 
 
+----
+
 #### Optimizing the above
 The fllowing are logical assumptions we can make to optimize the algorithm above. 
 
 - **Lemma 1**: The graph will not have a Hamiltonian Path if any node other than x,y has only one adjacent node.
   - Using this, we can end the algorithm if the above is encoutered. 
 
+----
 
 #### Time Complexity:
 
@@ -60,7 +64,7 @@ The Big O time complexity for the above algorithm is:
 
 Although there are better solutions like the famous Help Karp Algorithm with O(n<sup>2</sup>2<sup>n</sup>)(see below), for our case of a 100 nodes, this slution will be better for the worst case. 
 
-*However, as n increase to thousands, it will be less optimal.
+*However, as n increase to thousands, it will be less optimal.*
 
 ----
 
@@ -68,11 +72,13 @@ Although there are better solutions like the famous Help Karp Algorithm with O(n
 
 - **Time Complexity:** execution time increases as number of nodes increases.
 - **Recursion:** May lead to Stack Overflow.
-- **Space Complexity:** The algorithm forms a new array(named path) every time the destination is reached. *May be handled by garbage collector. 
+- **Space Complexity:** The algorithm forms a new array(named path) every time the destination is reached. *May be handled by garbage collector.*
 
 #### Handling issues and errors during implementation
 - Many a times, I recieved a *Maximum Recursion Depth* Exeeded error.
   - First, I was convinced my algorithm was extremely bad in terms of time complexity. However, there was simple but of not returning the recursive call. 
+
+----
 
 ### More Optimal Solutions 
 
