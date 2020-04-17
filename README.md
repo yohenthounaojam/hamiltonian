@@ -1,5 +1,5 @@
 # hamiltonian 
-This is a Hamiltonian path finder implementation. 
+This is a Hamiltonian path finder implementation for a non directed graph. 
 
 ----
 
@@ -50,7 +50,7 @@ When we reach the node **y**, we print the whole path array if it meets the foll
 The fllowing are logical assumptions we can make to optimize the algorithm above. 
 
 - **Lemma 1**: The graph will not have a Hamiltonian Path if any node other than x,y has only one adjacent node.
--- Using this, we can end the algorithm if the above is encoutered. 
+  - Using this, we can end the algorithm if the above is encoutered. 
 
 
 #### Time Complexity:
@@ -58,7 +58,7 @@ The fllowing are logical assumptions we can make to optimize the algorithm above
 The Big O time complexity for the above algorithm is:
 **O(n!)**; where n is the number of nodes. 
 
-Although there are better solutions like the famous Help Karp Algorithm with O(n<sup>2</sup>2n<sup>n</sup>)(see below), for our case of a 100 nodes, this slution will be better for the worst case. 
+Although there are better solutions like the famous Help Karp Algorithm with O(n<sup>2</sup>2<sup>n</sup>)(see below), for our case of a 100 nodes, this slution will be better for the worst case. 
 
 *However, as n increase to thousands, it will be less optimal.
 
@@ -72,9 +72,15 @@ Although there are better solutions like the famous Help Karp Algorithm with O(n
 
 #### Handling issues and errors during implementation
 - Many a times, I recieved a *Maximum Recursion Depth* Exeeded error.
--- First, I was convinced my algorithm was extremely bad in terms of time complexity. However, there was simple but of not returning the recursive call. 
+  - First, I was convinced my algorithm was extremely bad in terms of time complexity. However, there was simple but of not returning the recursive call. 
 
-### More Optimal Solutions
+### More Optimal Solutions 
+
+#### For graphs with maximum degree of 3
+- Time Complexity: O(1.251<sup>n</sup>)
+- More Details: [Kyoto University Research]: https://link.springer.com/chapter/10.1007%2F978-3-540-73545-8_13
 
 #### Bellman, Held, and Karp Algorithm
-- Time Complexity: O(n<sup>2</sup>2n<sup>n</sup>)
+- Time Complexity: O(n<sup>2</sup>2<sup>n</sup>)
+- Algorithm: In short, it uses Dynamic Programming to check for paths in subgraphs and saving the state for each subgrah. 
+- More details: [Hamiltonian Path Algorithm]: https://en.wikipedia.org/wiki/Held%E2%80%93Karp_algorithm
