@@ -49,17 +49,32 @@ When we reach the node **y**, we print the whole path array if it meets the foll
 #### Optimizing the above
 The fllowing are logical assumptions we can make to optimize the algorithm above. 
 
-We know for sure that the graph will not have a Hamiltonian Path if any node other than x,y 
+- **Lemma 1**: The graph will not have a Hamiltonian Path if any node other than x,y has only one adjacent node.
+-- Using this, we can end the algorithm if the above is encoutered. 
 
 
 #### Time Complexity:
 
+The Big O time complexity for the above algorithm is:
+**O(n!)**; where n is the number of nodes. 
+
+Although there are better solutions like the famous Help Karp Algorithm with O(n<sup>2</sup>2n<sup>n</sup>)(see below), for our case of a 100 nodes, this slution will be better for the worst case. 
+
+*However, as n increase to thousands, it will be less optimal.
 
 ----
 
 #### Drawbacks
 
-#### Errors
-    What tools, language, and libraries did you use to implement your solution? Why did you pick them?
-    What is the (Big O) time complexity of your solution? Are there more efficient ways to implement a solution? Why did you choose the algorithm that you did?
-    How did you handle errors? What are the cases where your code does not work?
+- **Time Complexity:** execution time increases as number of nodes increases.
+- **Recursion:** May lead to Stack Overflow.
+- **Space Complexity:** The algorithm forms a new array(named path) every time the destination is reached. *May be handled by garbage collector. 
+
+#### Handling issues and errors during implementation
+- Many a times, I recieved a *Maximum Recursion Depth* Exeeded error.
+-- First, I was convinced my algorithm was extremely bad in terms of time complexity. However, there was simple but of not returning the recursive call. 
+
+### More Optimal Solutions
+
+#### Bellman, Held, and Karp Algorithm
+- Time Complexity: O(n<sup>2</sup>2n<sup>n</sup>)
