@@ -16,6 +16,7 @@ To run the Colab Notebook:
 - Under Runtime, **Run All**
 - To change the number of nodes, cahnge the range of **vertices**. _(Eg: vertices=random.randrange(50,60); for 50-60 nodes)_
 
+_Or simply open the notebook using this link:_ https://colab.research.google.com/drive/1JfG76rXWCYLOHkG6eZgVUk0qQ4epWGso
 _To rum it as .py, donwload directly from Google Colaba or run the hamiltonian.py in this repository._
 
 ----
